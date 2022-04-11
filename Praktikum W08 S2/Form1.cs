@@ -27,7 +27,7 @@ namespace Praktikum_W08_S2
             sqlConnect.Open();
             DataTable dtTeam = new DataTable();
             DataTable dtTeam2 = new DataTable();
-            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.manager_id";
+            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.captain_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtTeam);
@@ -35,7 +35,6 @@ namespace Praktikum_W08_S2
             cBoxTimHome.DataSource = dtTeam;
             cBoxTimHome.DisplayMember = "Nama Tim";
             cBoxTimHome.ValueMember = "Nama Manager";
-
             cBoxTimLawan.DataSource = dtTeam2;
             cBoxTimLawan.DisplayMember = "Nama Tim";
             cBoxTimLawan.ValueMember = "Nama Manager";
