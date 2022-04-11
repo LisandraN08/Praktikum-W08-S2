@@ -44,7 +44,7 @@ namespace Praktikum_W08_S2
         {
             int SelectedIndex = cBoxTimHome.SelectedIndex;
             DataSet dtset = new DataSet();
-            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain', concat(home_stadium, ', ', city) as 'Nama Stadium', capacity as 'Jumlah Kapasitas' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.manager_id";
+            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain', concat(home_stadium, ', ', city) as 'Nama Stadium', capacity as 'Jumlah Kapasitas' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.captain_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtset);
@@ -58,7 +58,7 @@ namespace Praktikum_W08_S2
         {
             int SelectedIndex = cBoxTimLawan.SelectedIndex;
             DataSet dtset = new DataSet();
-            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain', concat(home_stadium, ', ', city) as 'Nama Stadium', capacity as 'Jumlah Kapasitas' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.manager_id";
+            sqlQuery = "SELECT team_name as 'Nama Tim', manager_name as 'Nama Manager', player_name as 'Nama Captain', concat(home_stadium, ', ', city) as 'Nama Stadium', capacity as 'Jumlah Kapasitas' FROM manager, team, player WHERE team.manager_id = manager.manager_id and player.player_id = team.captain_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtset);
