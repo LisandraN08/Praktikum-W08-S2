@@ -44,6 +44,13 @@ namespace Praktikum_W08_S2
             this.lblNamaStadium = new System.Windows.Forms.Label();
             this.lblCapacity = new System.Windows.Forms.Label();
             this.lblStadium = new System.Windows.Forms.Label();
+            this.dataGridMatch = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblTanggal = new System.Windows.Forms.Label();
+            this.lblSkor = new System.Windows.Forms.Label();
+            this.lblNamaTanggal = new System.Windows.Forms.Label();
+            this.lblJumlahSkor = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMatch)).BeginInit();
             this.SuspendLayout();
             // 
             // cBoxTimHome
@@ -144,7 +151,7 @@ namespace Praktikum_W08_S2
             // lblJumlahCapacity
             // 
             this.lblJumlahCapacity.AutoSize = true;
-            this.lblJumlahCapacity.Location = new System.Drawing.Point(395, 293);
+            this.lblJumlahCapacity.Location = new System.Drawing.Point(390, 231);
             this.lblJumlahCapacity.Name = "lblJumlahCapacity";
             this.lblJumlahCapacity.Size = new System.Drawing.Size(0, 17);
             this.lblJumlahCapacity.TabIndex = 14;
@@ -152,7 +159,7 @@ namespace Praktikum_W08_S2
             // lblNamaStadium
             // 
             this.lblNamaStadium.AutoSize = true;
-            this.lblNamaStadium.Location = new System.Drawing.Point(395, 250);
+            this.lblNamaStadium.Location = new System.Drawing.Point(390, 201);
             this.lblNamaStadium.Name = "lblNamaStadium";
             this.lblNamaStadium.Size = new System.Drawing.Size(0, 17);
             this.lblNamaStadium.TabIndex = 13;
@@ -160,7 +167,7 @@ namespace Praktikum_W08_S2
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Location = new System.Drawing.Point(321, 293);
+            this.lblCapacity.Location = new System.Drawing.Point(318, 231);
             this.lblCapacity.Name = "lblCapacity";
             this.lblCapacity.Size = new System.Drawing.Size(66, 17);
             this.lblCapacity.TabIndex = 12;
@@ -169,17 +176,77 @@ namespace Praktikum_W08_S2
             // lblStadium
             // 
             this.lblStadium.AutoSize = true;
-            this.lblStadium.Location = new System.Drawing.Point(321, 250);
+            this.lblStadium.Location = new System.Drawing.Point(321, 201);
             this.lblStadium.Name = "lblStadium";
             this.lblStadium.Size = new System.Drawing.Size(63, 17);
             this.lblStadium.TabIndex = 11;
             this.lblStadium.Text = "Stadium:";
             // 
+            // dataGridMatch
+            // 
+            this.dataGridMatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMatch.Location = new System.Drawing.Point(12, 378);
+            this.dataGridMatch.Name = "dataGridMatch";
+            this.dataGridMatch.RowHeadersWidth = 51;
+            this.dataGridMatch.RowTemplate.Height = 24;
+            this.dataGridMatch.Size = new System.Drawing.Size(776, 280);
+            this.dataGridMatch.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(324, 272);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Check";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblTanggal
+            // 
+            this.lblTanggal.AutoSize = true;
+            this.lblTanggal.Location = new System.Drawing.Point(318, 321);
+            this.lblTanggal.Name = "lblTanggal";
+            this.lblTanggal.Size = new System.Drawing.Size(64, 17);
+            this.lblTanggal.TabIndex = 17;
+            this.lblTanggal.Text = "Tanggal:";
+            // 
+            // lblSkor
+            // 
+            this.lblSkor.AutoSize = true;
+            this.lblSkor.Location = new System.Drawing.Point(341, 348);
+            this.lblSkor.Name = "lblSkor";
+            this.lblSkor.Size = new System.Drawing.Size(41, 17);
+            this.lblSkor.TabIndex = 18;
+            this.lblSkor.Text = "Skor:";
+            // 
+            // lblNamaTanggal
+            // 
+            this.lblNamaTanggal.AutoSize = true;
+            this.lblNamaTanggal.Location = new System.Drawing.Point(388, 321);
+            this.lblNamaTanggal.Name = "lblNamaTanggal";
+            this.lblNamaTanggal.Size = new System.Drawing.Size(0, 17);
+            this.lblNamaTanggal.TabIndex = 19;
+            // 
+            // lblJumlahSkor
+            // 
+            this.lblJumlahSkor.AutoSize = true;
+            this.lblJumlahSkor.Location = new System.Drawing.Point(388, 348);
+            this.lblJumlahSkor.Name = "lblJumlahSkor";
+            this.lblJumlahSkor.Size = new System.Drawing.Size(0, 17);
+            this.lblJumlahSkor.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 670);
+            this.Controls.Add(this.lblJumlahSkor);
+            this.Controls.Add(this.lblNamaTanggal);
+            this.Controls.Add(this.lblSkor);
+            this.Controls.Add(this.lblTanggal);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridMatch);
             this.Controls.Add(this.lblJumlahCapacity);
             this.Controls.Add(this.lblNamaStadium);
             this.Controls.Add(this.lblCapacity);
@@ -198,6 +265,7 @@ namespace Praktikum_W08_S2
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +288,12 @@ namespace Praktikum_W08_S2
         private System.Windows.Forms.Label lblNamaStadium;
         private System.Windows.Forms.Label lblCapacity;
         private System.Windows.Forms.Label lblStadium;
+        private System.Windows.Forms.DataGridView dataGridMatch;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblTanggal;
+        private System.Windows.Forms.Label lblSkor;
+        private System.Windows.Forms.Label lblNamaTanggal;
+        private System.Windows.Forms.Label lblJumlahSkor;
     }
 }
 
